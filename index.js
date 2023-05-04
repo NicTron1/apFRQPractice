@@ -13,8 +13,8 @@ app.get('/', (req, res) => {
 });
 
 // Import the sample data
-const sampleData = require(path.join(__dirname, 'sampleData.json'));
-console.log(path.join(__dirname, 'sampleData.json'))
+const sampleData = require(path.join(__dirname, 'sampledata.json'));
+
 
 // Add the /questions endpoint
 app.get('/questions', (req, res) => {
