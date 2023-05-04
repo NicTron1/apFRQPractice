@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 // Import the sample data
-const sampleData = require('.public/sampleData.json');
+const sampleData = require('./public/sampleData.json');
 
 // Add the /questions endpoint
 app.get('/questions', (req, res) => {
