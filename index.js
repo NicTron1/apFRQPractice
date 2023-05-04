@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const port = 3000;
+const fs = require('fs');
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -13,7 +14,9 @@ app.get('/', (req, res) => {
 });
 
 // Import the sample data
-const sampleData = require(path.join(__dirname, 'sampleData.json'));
+const sampleDataFilePath = path.join(__dirname, 'sampleData.json');
+const sampleDataFileContent = fs.readFileSync(sampleDataFilePath, 'utf8');
+const sampleData = JSON.parse(sampleDataFileContent);
 
 // Add the /questions endpoint
 app.get('/questions', (req, res) => {
