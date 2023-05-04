@@ -22,6 +22,18 @@
       ],
       "correctAnswer": 2,
       "explanation": "Explanation for question 2"
+    },
+    {
+      "id": 3,
+      "question": "Sample question 3",
+      "simplifiedChoices": [
+        "Simplified choice A",
+        "Simplified choice B",
+        "Simplified choice C",
+        "Simplified choice D"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Explanation for question 3"
     }
   ]
   
