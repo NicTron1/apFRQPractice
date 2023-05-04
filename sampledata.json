@@ -1,15 +1,15 @@
 [
     {
       "id": 1,
-      "question": "Sample question 1",
+      "question": "Describe one characteristic of a membrane that requires a channel be present for chloride ions to passively cross the membrane",
       "simplifiedChoices": [
-        "Simplified choice A",
-        "Simplified choice B",
-        "Simplified choice C",
-        "Simplified choice D"
+        "What is the function of a membrane channel",
+        "What fact about membranes explain the need for a channel?",
+        "Where is a membrane channel found",
+        "What type of transport does a membrane channel use"
       ],
       "correctAnswer": 1,
-      "explanation": "Explanation for question 1"
+      "explanation": "The interior of the membrane/phospholipid tail is nonpolar.\nThe interior of the membrane/phospholipid tail is not charged.\nThe interior of the membrane/phospholipid tail is hydrophobic"
     },
     {
       "id": 2,
