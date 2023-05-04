@@ -3,25 +3,25 @@
       "id": 1,
       "question": "Describe one characteristic of a membrane that requires a channel be present for chloride ions to passively cross the membrane",
       "simplifiedChoices": [
-        "What is the function of a membrane channel",
-        "What fact about membranes explain the need for a channel?",
-        "Where is a membrane channel found",
-        "What type of transport does a membrane channel use"
+        "What is the purpose of a chloride ion channel in membrane transport?",
+        "What makes a channel necessary for passive transport across a membrane?",
+        "How does a chloride ion channel aid in the passive transport of chloride ions across a membrane?",
+        "What role does a chloride ion channel play in the active transport of chloride ions across a membrane?"
       ],
       "correctAnswer": 1,
-      "explanation": "The interior of the membrane/phospholipid tail is nonpolar.\nThe interior of the membrane/phospholipid tail is not charged.\nThe interior of the membrane/phospholipid tail is hydrophobic"
+      "explanation": "This question is asking why a chloride ion channel is needed for the passive transport of chloride ions across a membrane. The student should know that a chloride ion channel is a necessary component for passive transport and be familiar with the basic concept of membrane transport."
     },
     {
       "id": 2,
-      "question": "Sample question 2",
+      "question": "Crossing over creates physical connections that are required for proper separation of homologous chromosomes during meiosis. A diploid cell with four pairs of homologous chromosomes undergoes meiosis to produce four haploid cells. Crossing over occurs between only three of the pairs. Predict the number of chromosomes most likely present in each of the four haploid cells. ",
       "simplifiedChoices": [
-        "Simplified choice A",
-        "Simplified choice B",
-        "Simplified choice C",
-        "Simplified choice D"
+        "How does crossing over affect the number of homologous chromosomes in a diploid cell during meiosis?",
+        "What is the significance of homologous chromosomes in creating physical connections during meiosis?",
+        "Given the occurrence of crossing over between only three pairs of homologous chromosomes in meiosis, predict the number of chromosomes in each of the four resulting haploid cells.",
+        "What happens to the number of chromosomes during crossing over in a diploid cell?"
       ],
       "correctAnswer": 2,
-      "explanation": "Explanation for question 2"
+      "explanation": "This question is asking the student to predict the number of chromosomes in the haploid cells resulting from the meiosis of a diploid cell that has undergone crossing over between only three pairs of homologous chromosomes. The student is expected to know the relationship between crossing over and the proper separation of homologous chromosomes in meiosis, and how this affects the number of chromosomes in the resulting haploid cells."
     },
     {
       "id": 3,
