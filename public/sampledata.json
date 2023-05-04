@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "question": "Sample question 1",
+      "simplifiedChoices": [
+        "Simplified choice A",
+        "Simplified choice B",
+        "Simplified choice C",
+        "Simplified choice D"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 1"
+    },
+    {
+      "id": 2,
+      "question": "Sample question 2",
+      "simplifiedChoices": [
+        "Simplified choice A",
+        "Simplified choice B",
+        "Simplified choice C",
+        "Simplified choice D"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 2"
+    }
+  ]
+  

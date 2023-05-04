@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Biology FRQ Practice</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #fafafa;
+      color: #333;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+  
+    .card {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .question {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .choices {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+    .choice {
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 3px;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+  
+    .choice:hover {
+      background-color: #e0e0e0;
+    }
+  
+    .choice.correct {
+      background-color: #90ee90;
+    }
+  
+    .choice.incorrect {
+      background-color: #f08080;
+    }
+  
+    #nextQuestionButton {
+      display: block;
+      margin: 20px auto;
+      background-color: #007AFF;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 12px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+  
+    #nextQuestionButton:hover {
+      background-color: #006BEC;
+    }
+  
+    #explanation {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+  
+</head>
+<body>
+  <h1>That FRQ Is Asking What????</h1>
+  <div class="container" id="questionsContainer"></div>
+  <div id="explanation" style="display: none;"></div>
+  <button id="nextQuestionButton">Next Question</button>
+  <script>
+    async function fetchQuestions() {
+    const response = await fetch('/questions');
+    const questions = await response.json();
+    return questions;
+  }
+
+  async function checkAnswer(questionId, answer) {
+    const response = await fetch('/checkAnswer', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ questionId, answer })
+    });
+    const result = await response.json();
+    return result.correct;
+  }
+
+  function createQuestionCard(question) {
+  const card = document.createElement('div');
+  card.classList.add('card');
+
+  const questionText = document.createElement('div');
+  questionText.classList.add('question');
+  questionText.textContent = question.question;
+  card.appendChild(questionText);
+
+  const choices = document.createElement('ul');
+  choices.classList.add('choices');
+
+  question.simplifiedChoices.forEach((choice, index) => {
+    const li = document.createElement('li');
+    li.classList.add('choice');
+    li.textContent = choice;
+    li.onclick = async () => {
+      // Disable other choices
+      const otherChoices = li.parentElement.querySelectorAll('.choice');
+      otherChoices.forEach(choice => (choice.style.pointerEvents = 'none'));
+
+      const correct = await checkAnswer(question.id, index);
+      li.classList.add(correct ? 'correct' : 'incorrect');
+      showExplanation(question.explanation);
+    };
+    choices.appendChild(li);
+  });
+
+  card.appendChild(choices);
+  return card;
+}
+
+function showExplanation(explanationText) {
+  const explanation = document.getElementById('explanation');
+  explanation.textContent = explanationText;
+  explanation.style.display = 'block';
+  explanation.scrollIntoView({ behavior: 'smooth', block: 'end' });
+}
+
+function hideExplanation() {
+  const explanation = document.getElementById('explanation');
+  explanation.style.display = 'none';
+}
+
+async function loadRandomQuestion() {
+  hideExplanation();
+  const questions = await fetchQuestions();
+  const randomIndex = Math.floor(Math.random() * questions.length);
+  const questionCard = createQuestionCard(questions[randomIndex]);
+  const questionsContainer = document.getElementById('questionsContainer');
+  questionsContainer.innerHTML = '';
+  questionsContainer.appendChild(questionCard);
+}
+
+(async () => {
+  await loadRandomQuestion();
+  const nextQuestionButton = document.getElementById('nextQuestionButton');
+  nextQuestionButton.onclick = async () => {
+    await loadRandomQuestion();
+  };
+})();
+
+  </script>
+</body>
+</html>
