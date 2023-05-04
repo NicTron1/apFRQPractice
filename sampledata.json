@@ -34,6 +34,18 @@
       ],
       "correctAnswer": 3,
       "explanation": "This question is asking the student to explain how the introduction of toxins to soil through human activities can kill off plants, or primary producers, and how this can have an impact across the food web of a community."
+    },
+    {
+      "id": 4,
+      "question": "Introduction of mRNAs into cells allows the cells to produce foreign proteins that they 1 point might not normally produce. Explain why the production of a foreign protein may be more likely from the introduction of mRNA than DNA into cells.",
+      "simplifiedChoices": [
+        "Why is the introduction of mRNA more efficient than DNA for producing proteins in cells?",
+        "How does the introduction of mRNA and DNA affect cell division in cells?",
+        "Why is the introduction of mRNA and DNA necessary for the production of endogenous proteins in cells?",
+        "How does the introduction of DNA into cells interfere with the production of foreign proteins?"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This question is asking the student to explain why introducing mRNA is a more efficient way to produce foreign proteins in cells than DNA. The student is expected to understand the steps involved in protein synthesis and how mRNA allows direct translation of a foreign protein, while DNA requires transcription and post-transcriptional processing. The focus is on the differences in efficiency between mRNA and DNA in introducing foreign proteins and not just their general roles in protein synthesis."
     }
   ]
   
