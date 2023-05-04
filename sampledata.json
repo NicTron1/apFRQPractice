@@ -17,7 +17,7 @@
       "simplifiedChoices": [
         "How does crossing over affect the number of homologous chromosomes in a diploid cell during meiosis?",
         "What is the significance of homologous chromosomes in creating physical connections during meiosis?",
-        "Given the occurrence of crossing over between only three pairs of homologous chromosomes in meiosis, predict the number of chromosomes in each of the four resulting haploid cells.",
+        "How many chromosomes are in each of the four resulting haploid cells?",
         "What happens to the number of chromosomes during crossing over in a diploid cell?"
       ],
       "correctAnswer": 2,
@@ -25,15 +25,15 @@
     },
     {
       "id": 3,
-      "question": "Sample question 3",
+      "question": "Explain how human activities that add toxins to the soil could change a community with many species at each trophic level into a community with few species at each trophic level.",
       "simplifiedChoices": [
-        "Simplified choice A",
-        "Simplified choice B",
-        "Simplified choice C",
-        "Simplified choice D"
+        "How do soil toxins impact a species?",
+        "What does a primary prodcer do for the rest of the ecosystem it lives in?",
+        "How would the removal of a primary producer reduce the number of species in each trophic level of a community?",
+        "Where do primary producers get their energy?"
       ],
       "correctAnswer": 3,
-      "explanation": "Explanation for question 3"
+      "explanation": "This question is asking the student to explain how the introduction of toxins to soil through human activities can kill off plants, or primary producers, and how this can have an impact across the food web of a community."
     }
   ]
   
